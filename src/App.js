@@ -1,5 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Plausible from "plausible-tracker";
+
+const { trackEvent } = Plausible();
 
 function App() {
   return (
@@ -17,7 +20,22 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={()=>{console.log('hi')}}>HI</button>
+        <button
+          onClick={() => {
+            trackEvent(
+              "signup",
+              {
+                callback: () => console.log("donmme"),
+                props: {
+                  variation: "button A",
+                },
+              },
+              { trackLocalhost: true }
+            );
+          }}
+        >
+          HI
+        </button>
       </header>
     </div>
   );
