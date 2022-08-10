@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Plausible from 'plausible-tracker'
+// import Plausible from 'plausible-tracker'
 
-const { trackPageview } = Plausible()
+// const { trackPageview } = Plausible()
 
-// Track a page view
-trackPageview({
-  trackLocalhost: false,
-  url: "https://plausibletrackevent.netlify.app/"
-});
+// // Track a page view
+// trackPageview({
+//   trackLocalhost: false,
+//   url: "https://plausibletrackevent.netlify.app/"
+// });
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

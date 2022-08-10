@@ -23,11 +23,11 @@ function App() {
         <button
           onClick={() => {
             trackEvent(
-              "signup",
+              "signkhkup",
               {
                 callback: () => console.log("donmme"),
                 props: {
-                  variation: "button A",
+                  variation: "button bb",
                 },
               },
               { trackLocalhost: true }
